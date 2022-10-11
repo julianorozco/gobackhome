@@ -1,0 +1,33 @@
+@media (min-width: 576px){
+    .carousel-inner .carousel-item{
+        height: 35vh; 
+    }
+    .video{
+        height: 35vh;
+    }
+}
+
+@media (min-width: 768px){
+    .carousel-inner .carousel-item{
+        height: 50vh; 
+    }
+    .video{
+        height: 50vh;
+    }
+}
+
+@media (min-width: 992px){
+    .carousel-inner .carousel-item{
+        height: 70vh; 
+    }
+    .video{
+        height: 70vh;
+    }
+}
+
+@media (min-width: 1200px){
+    .carousel-inner .carousel-item{
+        height: 85vh; 
+    }
+   
+}
