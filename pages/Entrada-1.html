@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada 1</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <header>
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+              <img
+                src="../imges/logo GBH.png"
+                alt="logo"
+                width="auto"
+                height="50px"
+              />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="AcercaDe.html"
+                    >QUIÉNES SOMOS</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Noticias.html">NOTICIAS</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    PROYECTOS
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">IBERÁ</a></li>
+                    <li><a class="dropdown-item" href="#">EL IMPENETRABLE</a></li>
+                    <li><a class="dropdown-item" href="#">PATAGONIA</a></li>
+                    <li><a class="dropdown-item" href="#">PATAGONIA AZUL</a></li>
+                    <li><a class="dropdown-item" href="#">PROGRAMA MARINO</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#"
+                        >PARQUES PARA LA CONSERVACIÓN</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Galeria.html">GALERIA</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href=""
+                    data-bs-toggle="modal"
+                    data-bs-target="#loginModal"
+                  >
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                    Iniciar sesión
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- loginModal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+          <div class="d-flex">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="loginModalLabel">Bienvenido</h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    onClick="back()"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row" id="login">
+                    <div class="col-12 d-flex justify-content-center">
+                      <p>Por favor, coloque sus datos de ingreso:</p>
+                    </div>
+                    <form class="d-flex col-12">
+                      <div class="row d-flex justify-content-center">
+                        <div class="px-4 pb-3 d-flex justify-content-center">
+                          <input type="email" id="email" name="email" placeholder="E-mail" required />
+                        </div>
+                        <div class="px-4 pb-3 d-flex justify-content-center">
+                          <input type="password" id="password" name="login" placeholder="Contraseña" required />
+                        </div>
+                        <div class="px-4 pb-3 d-flex justify-content-center">
+                          <input type="submit" value="Ingresar" class="btn btn-dark" />
+                        </div>
+                      </div>
+                    </form>
+                    <div>
+                      <div class="col-12 d-flex justify-content-center">
+                        <p>O acceda mediante:</p>
+                      </div>
+                      <div class="flex-row gap-4 d-flex justify-content-center">
+                        <div>
+                          <a href="/" class="btn btn-link link-dark">
+                            <i class="fa fa-google" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                        <div>
+                          <a href="/" class="btn btn-link link-dark">
+                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row" id="reset">
+                    <div class="col-12 d-flex justify-content-center">
+                      <p>Coloque su e-mail, le enviaremos un correo para que pueda restablecer su contraseña:</p>
+                    </div>
+                    <form>
+                      <div class="col-12 d-flex justify-content-center">
+                        <input type="emailreset" id="emailreset" name="emailreset" placeholder="E-mail" required />
+                      </div>
+                      <div class="col-12 d-flex justify-content-center pt-3">
+                        <input type="submit" value="Enviar" class="btn btn-dark" />
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button href="" class="btn btn-link link-dark" id="back" onClick="back()">Volver atrás</button>
+                  <button href="" class="btn btn-link link-dark" id="forget" onClick="password()">
+                    ¿Olvidó su contraseña?
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /loginModal -->
+      </header>
+      <main>
+    <section class="container">
+        <div class="row mx-md-5">
+            <div>
+                <div class="d-flex justify-content-center">
+                    <img class="col-12" src="../imges/coatí.jpg" alt="coatí">
+                </div>
+                <h3 class="fw-bold mt-4">El coatí: El remanente de los bosques tucumanos.</h3>
+                <p class="text_entrada">Por Ulises Paz / 11 de octubre de 2020 / Go Back Home, Fundación</p>
+            </div>
+            <div class="mt-3">
+                <ul class="text-secondary">
+                    <li class="mb-3">Clase: Mammalia</li>
+                    <li class="mb-3"> Orden: Carnivora</li>
+                    <li class="mb-3">Familia: Procyonidae</li>
+                    <li class="mb-3">Nombre científico: Nasua Nasua</li>
+                    <li>Nombré común: Coatí</li>
+                </ul>           
+                <p class="mt-5">
+                    El coatí es una especie de mamífero carnivoro que es catalogado como vulnerable segun la SAREM (sociedad argentina para el estudio de mamíferos). Su distribución en Argentina se limita en las provincias de Salta, Jujuy, Formosa, Santiago del Esteros, Misiones, Corrientes, Chaco y Tucumán, en este último se encuentra en peligro crítico por los escasos registros que se obtuvieron y a su vez por la gran perdida de habitat.
+                </p>
+            </div>
+            <div class="d-flex justify-content-center mt-3">
+                <img src="../imges/DISTRIBUCIÓN.png" alt="Distribución_del_coatí">
+            </div>
+            <p class="text-center">Distribución del coatí en Tucumán</p>
+            <div class="mt-3">
+                <p>
+                    En la fundación Go Back Home buscamos asegurar la conservación de una población viable a largo plazo de coatíes y de las especies con las que él convive en el territorio tucumano.
+
+                    Nuestros esfuerzos se centran en generar información sobre la situación de la especie, el estado de su hábitat y entender sus amenazas, para implementar medidas de conservación en las Yungas de Tucuman.
+                </p>
+            </div>
+            <div class="mt-5">
+                <h3>Comentarios</h3>
+                <div class="text-center d-flex flex-column justify-content-center">
+                    <h5>¿Que te pareció la nota?</h5>
+                    <h6 class="fw-light">27 respuestas.</h6>
+                </div>
+                <form class="mt-md-5">
+                    <div class="d-flex my-1">
+                        <h5 class="py-1 borde text-dark">5 Comentarios</h5>
+                        <h5 class="col py-1 border-bottom text-end text-dark">Iniciar sesión</h5>
+                    </div>
+                    <div class="col-12 mb-4 form d-flex">
+                        <img class="usuario me-3" src="../imges/USER_1.jpg" alt="USUARIO_1">
+                        <label for="exampleInputText" class="form-label"></label>
+                        <div class="col">
+                            <input type="text" class="form-control" id="exampleInputText" placeholder="Escribe un comentario." maxlenght="500">     
+                            <button type="submit" class="mt-2 btn btn-primary">Agrega un comentario...</button>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-2 form d-flex">
+                        <img class="usuario me-3" src="../imges/USER_2.png" alt="USUARIO_2">
+                        <div>
+                            <h6>Mirtha <span class="fw-light">hace 2 días</span></h6>
+                            <p>Muy interesante 😃</p>
+                            <div class="d-flex">
+                                <a class="d-flex" href="#">
+                                    <i class="mx-1 bi bi-chevron-up"></i>
+                                    <h6 class="me-1">1</h6>
+                                </a>
+                                <h6 class="mx-1">Responder</h6>
+                                <h6 class="mx-1">Compartir</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col ms-5 mb-3 form d-flex">
+                        <img class="subusuario me-2" src="../imges/USER_3.png" alt="USUARIO_3">
+                        <div>
+                            <h6>Ulises <span class="fw-light">hace 1 día</span></h6>
+                            <p>Gracias. Me alegra que te haya gustado la nota.</p>
+                            <div class="d-flex">
+                                <a class="d-flex" href="#">
+                                    <i class="mx-1 bi bi-chevron-up"></i>
+                                    <h6 class="me-1">1</h6>
+                                </a>
+                                <h6 class="mx-1">Responder</h6>
+                                <h6 class="mx-1">Compartir</h6>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="col-12 mt-3 mb-3 form d-flex">
+                        <img class="usuario me-3" src="../imges/USER_4.jpg" alt="USUARIO_4">
+                        <div>
+                            <h6>Loida <span class="fw-light">hace 3 días</span></h6>
+                            <p>Excelente nota!</p>
+                            <div class="d-flex">
+                                <a class="d-flex" href="#">
+                                    <i class="mx-1 bi bi-chevron-up"></i>
+                                    <h6 class="me-1">1</h6>
+                                </a>
+                                <h6 class="mx-1">Responder</h6>
+                                <h6 class="mx-1">Compartir</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-3 mb-3 form d-flex">
+                        <img class="usuario me-3" src="../imges/USER_5.jpg" alt="USUARIO_4">
+                        <div>
+                            <h6>Gonzalo <span class="fw-light">hace 3 días</span></h6>
+                            <p>Muy buena nota!</p>
+                            <div class="d-flex">
+                                <a class="d-flex" href="#">
+                                    <i class="mx-1 bi bi-chevron-up"></i>
+                                    <h6 class="me-1">2</h6>
+                                </a>
+                                <h6 class="mx-1">Responder</h6>
+                                <h6 class="mx-1">Compartir</h6>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </main>
+    </section>
+    <!-- Footer -->
+      <footer class="footerBackground">
+        <div class="container">
+          <div class="row py-5 border-top">
+            <div class="col-12 col-md-3 mb-3">
+              <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none justify-content-center">
+                <img src="../imges/logo GBH.png" class="bi me-2" width="auto" height="70" />
+              </a>
+            </div>
+            <div class="col-md-3 mb-3"></div>
+            <div class="col-12 col-md-3 mb-3">
+              <h5 class="text-white">Nosotros</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="../index.html" class="nav-link p-0 text-white">Inicio</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="AcercaDe.html" class="nav-link p-0 text-white">Quiénes somos</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="Noticias.html" class="nav-link p-0 text-white">Noticias</a>
+                </li>
+                <li class="nav-item mb-2"><a href="Galeria.html" class="nav-link p-0 text-white">Galería</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+              <h5 class="text-white">Proyectos</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Iberá</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">El Impenetrable</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Patagonia</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Patagonia Azul</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Programa Marino</a></li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white">Parques para la conservación</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /Footer -->
+      <!-- script para icono de login y redes sociales -->
+  <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
+
+  <!-- script para media queries -->
+  <script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
+    crossorigin="anonymous"
+  ></script>
+
+  <!-- scrpt de booststrap -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"
+  ></script>
+   <!-- restablecer contraseña -->
+   <script>
+    function password() {
+      const login = document.getElementById("login");
+      const reset = document.getElementById("reset");
+      const back = document.getElementById("back");
+      const forget = document.getElementById("forget");
+      login.style.display = "none";
+      reset.style.display = "block";
+      back.style.display = "block";
+      forget.style.display = "none";
+    }
+    function back() {
+      const login = document.getElementById("login");
+      const reset = document.getElementById("reset");
+      const back = document.getElementById("back");
+      const forget = document.getElementById("forget");
+      login.style.display = "block";
+      reset.style.display = "none";
+      back.style.display = "none";
+      forget.style.display = "block";
+    }
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

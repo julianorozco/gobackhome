@@ -20,15 +20,16 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/media-queries.css" />
 
-    <title>Fundación Rewilding Argentina</title>
+    <title>Fundación GoBackHome</title>
+    <link rel="shortcut icon" href="./imges/logo GBH.png" type="png" alt="logo" />
   </head>
   <body>
     <header>
       <!-- menu botones navbar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            <img src="./imges/logo-rewildingArtboard-4-copy-3@2x.png" alt="logo" width="150px" height="50px" />
+          <a class="navbar-brand" href="index.html">
+            <img src="./imges/logo GBH.png" alt="logo" width="auto" height="50px" />
           </a>
           <button
             class="navbar-toggler"
@@ -43,10 +44,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">QUIÉNES SOMOS</a>
+                <a class="nav-link" aria-current="page" href="./pages/AcercaDe.html">QUIÉNES SOMOS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">NUESTRO MODELO</a>
+                <a class="nav-link" href="./pages/Noticias.html">NOTICIAS</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -70,10 +71,16 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">BLOG</a>
+                <a class="nav-link" href="./pages/Galeria.html">GALERIA</a>
               </li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#subscribeModal">
+                  <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                  Suscribirse
+                </a>
+              </li>
               <li class="nav-item">
                 <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#loginModal">
                   <i class="fa fa-user-circle-o" aria-hidden="true"></i>
@@ -159,6 +166,49 @@
         </div>
       </div>
       <!-- /loginModal -->
+      <!-- subscribeModal -->
+      <div
+        class="modal fade"
+        id="subscribeModal"
+        tabindex="-1"
+        aria-labelledby="subscribeModalLabel"
+        aria-hidden="true">
+        <div class="d-flex">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="subscribeModalLabel">Suscripción</h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                  onClick="back()"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row" id="login">
+                  <div class="col-12 d-flex justify-content-center">
+                    <p>
+                      Coloque su e-mail para poder suscribirse a nuestro newsletter y recibir notificaciones del blog:
+                    </p>
+                  </div>
+                  <form>
+                    <div class="row d-flex justify-content-center">
+                      <div class="px-4 pb-3 d-flex justify-content-center">
+                        <input type="email" id="emailSub" name="emailSub" placeholder="E-mail" required />
+                      </div>
+                      <div class="px-4 pb-3 d-flex justify-content-center">
+                        <input type="submit" value="Aceptar" class="btn btn-dark" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /subscribeModal -->
       <!-- carousel fotos de portada principal -->
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -209,8 +259,11 @@
         </button>
       </div>
     </header>
+
     <main>
-      <!-- <section class="container">
+      <!-- PRINCIPAL -->
+      <section class="container">
+        <!-- texto de portada -->
         <div class="text-center my-5">
           <p id="texto-uno" class="text-center">
             “El rewilding trae de vuelta la naturaleza, trae bienestar para las comunidades locales y,sobre todo, trae
@@ -218,6 +271,7 @@
           </p>
           <p>RICHARD PRESTON</p>
         </div>
+        <!-- video -->
         <div class="video">
           <iframe
             class="video"
@@ -227,23 +281,23 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
         </div>
-
+        <!-- texto QUIENES SOMOS -->
         <div class="text-center my-5">
           <h3>QUIÉNES SOMOS</h3>
           <div class="row">
-            <div class="col text-center">
-              <p class="texto">
-                Somos un grupo de conservacionistas y activistas unidos por el compromiso de recuperar los ecosistemas
-                naturales, el respeto por el valor intrínseco de todas las especies y el sueño de establecer modelos de
-                desarrollo para las comunidades rurales en un contexto de coexistencia con la naturaleza.
+            <div class="texto col-md-12">
+              <p>
+                Somos el grupo 4 de la comision 24i de Rolling Code, conservacionistas y activistas unidos por el
+                compromiso de recuperar los ecosistemas naturales, el respeto por el valor intrínseco de todas las
+                especies y el sueño de...
               </p>
-              <button type="button" class="btn btn-light">LEER MÁS</button>
+              <a href="./pages/AcercaDe.html"><button type="button" class="btn btn-light">LEER MÁS</button></a>
             </div>
           </div>
         </div>
-      </section> -->
-
-      <!-- <section>
+      </section>
+      <!-- parallax - texto como trabajamos -->
+      <section>
         <div class="container-fluid">
           <div class="row">
             <div class="col p-0">
@@ -256,62 +310,145 @@
             </div>
           </div>
         </div>
-        <div class="text-center my-5">
-          <div class="row">
-            <div class="col text-center">
-              <p class="texto">
-                Nuestro equipo trabaja en los territorios donde se encuentran nuestros proyectos. Ello nos permite
-                conocer en profundidad las áreas naturales y desarrollar e implementar estrategias de conservación y
-                restauración en beneficio de su fauna y flora, sus valores culturales, y su gente.
-              </p>
-              <button type="button" class="btn btn-light">LEER MÁS</button>
+        <!-- texto -->
+        <div class="container my-5">
+          <div class="texto">
+            <p>
+              Nuestro equipo trabaja en los territorios donde se encuentran nuestros proyectos. Ello nos permite conocer
+              en profundidad las áreas naturales y desarrollar e implementar estrategias de conservación y restauración
+              en beneficio de su fauna y flora, sus valores culturales, y su gente.
+            </p>
+            <button type="button" class="btn btn-light">LEER MÁS</button>
+          </div>
+        </div>
+      </section>
+      <!-- cards -->
+      <section class="container">
+        <div class="container">
+          <div class="text-center my-5">
+            <h3>NUESTROS PROYECTOS</h3>
+          </div>
+          <div class="row my-5">
+            <!-- card 1 -->
+            <div class="col-12 col-md-6 mb-2">
+              <div class="card bg-dark text-white">
+                <img
+                  src="./imges/Camping-Colonia-Carlos-Pellegrini-©-Rewilding-Argentina-15.jpg"
+                  class="card-img"
+                  alt="animales" />
+                <div class="card-img-overlay card-blue text-center d-flex flex-column justify-content-md-between">
+                  <h5 class="card-title">IBERÁ</h5>
+                  <p class="card-text">
+                    El Gran Parque protege amplias superficies de pastizal donde habitan aves amenazadas como el yetapá
+                    de collar y la monjita dominica. Son destacables las poblaciones de especies amenazadas como el
+                    venado de las pampas, el ciervo de los pantanos, el aguará guazú, el águila coronada, y una alta
+                    diversidad de peces paranaenses.
+                  </p>
+                  <button type="button" class="btn btn-outline-light btn-card">Descubre más</button>
+                </div>
+              </div>
+            </div>
+            <!-- card 2 -->
+            <div class="col-12 col-md-6 mb-2">
+              <div class="card bg-dark text-white">
+                <img src="./imges/path-g44f586a8f_1920.jpg" class="card-img" alt="animales" />
+                <div class="card-img-overlay card-blue text-center d-flex flex-column justify-content-md-between">
+                  <h5 class="card-title">EL IMPENETRABLE</h5>
+                  <p class="card-text">
+                    Poblaciones saludables de especies amenazadas como el pecarí labiado, el tatú carreta, el oso
+                    hormiguero, el tapir, y el aguará guazú; y la presencia de pecarí quimilero con crías y ocelote,
+                    además de uno de los últimos ejemplares de yaguareté en la provincia de Chaco.
+                  </p>
+                  <button type="button" class="btn btn-outline-light btn-card">Descubre más</button>
+                </div>
+              </div>
+            </div>
+            <!-- card 3 -->
+            <div class="col-12 col-md-6 mb-2">
+              <div class="card bg-dark text-white">
+                <img src="./imges/argentine-patagonia-geca082bf6_1920.jpg" class="card-img" alt="animales" />
+                <div class="card-img-overlay card-blue text-center d-flex flex-column justify-content-md-between">
+                  <h5 class="card-title">PATAGONIA</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi expedita beatae autem nemo
+                    laudantium. Ipsum assumenda ipsa natus? Neque optio veniam eos numquam deserunt reiciendis laborum
+                    ullam non esse dignissimos.
+                  </p>
+                  <button type="button" class="btn btn-outline-light btn-card">Descubre más</button>
+                </div>
+              </div>
+            </div>
+            <!-- card 4 -->
+            <div class="col-12 col-md-6 mb-2">
+              <div class="card bg-dark text-white">
+                <img src="./imges/patagonia_azul.jpg" class="card-img" alt="animales" />
+                <div class="card-img-overlay card-blue text-center d-flex flex-column justify-content-md-between">
+                  <h5 class="card-title">PATAGONIA AZUL</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi expedita beatae autem nemo
+                    laudantium. Ipsum assumenda ipsa natus? Neque optio veniam eos numquam deserunt reiciendis laborum
+                    ullam non esse dignissimos.
+                  </p>
+                  <button type="button" class="btn btn-outline-light btn-card">Descubre más</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </section> -->
-
+      </section>
       <!-- Footer -->
-      <div class="container">
-        <footer class="row py-5 my-5 border-top">
-          <div class="col-3 mb-3">
-            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none justify-content-center">
-              <img src="imges/logo-rewildingArtboard-4-copy-3@2x.png" class="bi me-2" width="130" />
-            </a>
-            <p class="text-muted d-flex justify-content-center">&copy; 2022</p>
+      <footer class="footerBackground">
+        <div class="container">
+          <div class="row py-5 border-top">
+            <div class="col-12 col-md-3 mb-3">
+              <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none justify-content-center">
+                <img src="imges/logo GBH.png" class="bi me-2" width="auto" height="70" />
+              </a>
+            </div>
+            <div class="col-md-3 mb-3"></div>
+            <div class="col-12 col-md-3 mb-3">
+              <h5 class="text-white">Nosotros</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="index.html" class="nav-link p-0 text-white">Inicio</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="pages/AcercaDe.html" class="nav-link p-0 text-white">Quiénes somos</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="pages/Noticias.html" class="nav-link p-0 text-white">Noticias</a>
+                </li>
+                <li class="nav-item mb-2"><a href="pages/Galeria.html" class="nav-link p-0 text-white">Galería</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+              <h5 class="text-white">Proyectos</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Iberá</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">El Impenetrable</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Patagonia</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Patagonia Azul</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Programa Marino</a></li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white">Parques para la conservación</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="col-3 mb-3"></div>
-          <div class="col-3 mb-3">
-            <h5>Nosotros</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Quienes somos</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Nuestro modelo</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Blog</a></li>
-            </ul>
-          </div>
-          <div class="col-3 mb-3">
-            <h5>Proyectos</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Iberá</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">El Impenetrable</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Patagonia</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Patagonia Azul</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Programa Marino</a></li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Parques para la conservación</a>
-              </li>
-            </ul>
-          </div>
-        </footer>
-      </div>
+        </div>
+      </footer>
       <!-- /Footer -->
     </main>
+
     <!-- script para icono de login y redes sociales -->
     <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
+
     <!-- script para media queries -->
     <script
       src="https://code.jquery.com/jquery-2.2.4.min.js"
       integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
       crossorigin="anonymous"></script>
+
     <!-- scrpt de booststrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"

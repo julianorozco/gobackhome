@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../imges/logo GBH.png" type="png" alt="logo">
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&family=Open+Sans:ital,wght@1,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/media-queries.css" />
+
+    <title>Fundación GoBackHome - Galeria</title>
+  </head>
+  <body>
+    <header>
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img
+              src="../imges/logo GBH.png"
+              alt="logo"
+              width="auto"
+              height="50px"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="AcercaDe.html"
+                  >QUIÉNES SOMOS</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Noticias.html">NOTICIAS</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  PROYECTOS
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">IBERÁ</a></li>
+                  <li><a class="dropdown-item" href="#">EL IMPENETRABLE</a></li>
+                  <li><a class="dropdown-item" href="#">PATAGONIA</a></li>
+                  <li><a class="dropdown-item" href="#">PATAGONIA AZUL</a></li>
+                  <li><a class="dropdown-item" href="#">PROGRAMA MARINO</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >PARQUES PARA LA CONSERVACIÓN</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Galeria.html">GALERIA</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href=""
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginModal"
+                >
+                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                  Iniciar sesión
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- loginModal -->
+      <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="d-flex">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="loginModalLabel">Bienvenido</h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                  onClick="back()"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row" id="login">
+                  <div class="col-12 d-flex justify-content-center">
+                    <p>Por favor, coloque sus datos de ingreso:</p>
+                  </div>
+                  <form class="d-flex col-12">
+                    <div class="row d-flex justify-content-center">
+                      <div class="px-4 pb-3 d-flex justify-content-center">
+                        <input type="email" id="email" name="email" placeholder="E-mail" required />
+                      </div>
+                      <div class="px-4 pb-3 d-flex justify-content-center">
+                        <input type="password" id="password" name="login" placeholder="Contraseña" required />
+                      </div>
+                      <div class="px-4 pb-3 d-flex justify-content-center">
+                        <input type="submit" value="Ingresar" class="btn btn-dark" />
+                      </div>
+                    </div>
+                  </form>
+                  <div>
+                    <div class="col-12 d-flex justify-content-center">
+                      <p>O acceda mediante:</p>
+                    </div>
+                    <div class="flex-row gap-4 d-flex justify-content-center">
+                      <div>
+                        <a href="/" class="btn btn-link link-dark">
+                          <i class="fa fa-google" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                      <div>
+                        <a href="/" class="btn btn-link link-dark">
+                          <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row" id="reset">
+                  <div class="col-12 d-flex justify-content-center">
+                    <p>Coloque su e-mail, le enviaremos un correo para que pueda restablecer su contraseña:</p>
+                  </div>
+                  <form>
+                    <div class="col-12 d-flex justify-content-center">
+                      <input type="emailreset" id="emailreset" name="emailreset" placeholder="E-mail" required />
+                    </div>
+                    <div class="col-12 d-flex justify-content-center pt-3">
+                      <input type="submit" value="Enviar" class="btn btn-dark" />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button href="" class="btn btn-link link-dark" id="back" onClick="back()">Volver atrás</button>
+                <button href="" class="btn btn-link link-dark" id="forget" onClick="password()">
+                  ¿Olvidó su contraseña?
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /loginModal -->
+    </header>
+   <!-- TERMINA NAVBAR -->
+    <main>
+      <!-- PRINCIPAL -->
+     
+      <!-- parallax - QUIENES SOMOS -->
+      <section>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col p-0">
+              <div class="card bg-dark text-white">
+                <div class="parallax"></div>
+                <div class="card-img-overlay text-center">
+                  <h4 class="card-title">GALERIA DE IMAGENES</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+        <section class="container-fluid">
+    
+          
+                 <div class="row d-flex justify-content-lg-between" >
+                  <!-- COATI -->
+                  <div class="card text-bg-dark col-12 col-lg-3 col-md-4 ">
+                    <img src="../imges/coati.jpg" height="100%" class="card-img " alt="COATI">
+                    <div class="card-img-overlay">
+                    
+                    </div>
+                  </div>
+                  <!-- CARAYA -->
+                  <div class="card text-bg-dark col-12 col-lg-3 col-md-4 ">
+                    <img src="../imges/caraya.jpg" height="100%" class="card-img" alt="CARAYA">
+                    <div class="card-img-overlay">
+             
+                    </div>
+                  </div>
+                 <!-- CORZUELA -->
+                 <div class="card text-bg-dark col-12 col-lg-3 col-md-4 ">
+                    <img src="../imges/corzuela.jpg" height="100%" class="card-img" alt="CORZUELA">
+                    <div class="card-img-overlay">
+                  
+                    </div>
+                  </div>
+                  <!-- SURI-->
+                  <div class="card text-bg-dark col-12 col-lg-3 col-md-4">
+                    <img src="../imges/suri.jpg" class="card-img" alt="SURI">
+                    <div class="card-img-overlay">
+                      
+                    </div>
+                  </div>
+                  <!-- TAPIR -->
+                  <div class="card text-bg-dark col-12 col-lg-3 col-md-4">
+                    <img src="../imges/tapir.jpg" height="100%" class="card-img" alt="TAPIR">
+                    <div class="card-img-overlay">
+                    
+                    </div>
+                  </div>
+                   <!-- TORTUGA CARBONA -->
+                   <div class=" card text-bg-dark col-12 col-lg-3 col-md-4">
+                    <img src="../imges/tortuga carbona.jpg" height="100%" class="card-img" alt="TORTUGA CARBONA">
+                    <div class="card-img-overlay">
+                      
+                    </div>
+                  </div>
+                   <!-- TORTUGA TERRESTRE -->
+                   <div class="card text-bg-dark col-12 col-lg-3 col-md-4">
+                    <img src="../imges/tortuga terrestre.jpg" class="card-img" alt="TORTUGA TERRESTRE">
+                    <div class="card-img-overlay">
+                  
+                    </div>
+                  </div>
+                   <!-- ZORRO GRIS -->
+                   
+                   <div class="card text-bg-dark col-12 col-lg-3 col-md-4">
+                    
+                    <img src="../imges/ZORRO GRIS.jpg" height="100%" class="card-img " alt="ZORRO GRIS">
+                    <div class="card-img-overlay">
+                     
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+      
+        </section>
+        <!-- Footer -->
+        <footer class="footerBackground">
+        <div class="container">
+          <div class="row py-5 border-top">
+            <div class="col-12 col-md-3 mb-3">
+              <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none justify-content-center">
+                <img src="../imges/logo GBH.png" class="bi me-2" width="auto" height="70" />
+              </a>
+            </div>
+            <div class="col-md-3 mb-3"></div>
+            <div class="col-12 col-md-3 mb-3">
+              <h5 class="text-white">Nosotros</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="../index.html" class="nav-link p-0 text-white">Inicio</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="AcercaDe.html" class="nav-link p-0 text-white">Quiénes somos</a>
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="Noticias.html" class="nav-link p-0 text-white">Noticias</a>
+                </li>
+                <li class="nav-item mb-2"><a href="Galeria.html" class="nav-link p-0 text-white">Galería</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-md-3 mb-3">
+              <h5 class="text-white">Proyectos</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Iberá</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">El Impenetrable</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Patagonia</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Patagonia Azul</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Programa Marino</a></li>
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-white">Parques para la conservación</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- /Footer -->
+    </main>
+
+    <!-- script para icono de login y redes sociales -->
+    <script src="https://use.fontawesome.com/c2813ccf5b.js"></script>
+
+    <!-- script para media queries -->
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- scrpt de booststrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- restablecer contraseña -->
+    <script>
+      function password() {
+        const login = document.getElementById("login");
+        const reset = document.getElementById("reset");
+        const back = document.getElementById("back");
+        const forget = document.getElementById("forget");
+        login.style.display = "none";
+        reset.style.display = "block";
+        back.style.display = "block";
+        forget.style.display = "none";
+      }
+      function back() {
+        const login = document.getElementById("login");
+        const reset = document.getElementById("reset");
+        const back = document.getElementById("back");
+        const forget = document.getElementById("forget");
+        login.style.display = "block";
+        reset.style.display = "none";
+        back.style.display = "none";
+        forget.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
