@@ -71,13 +71,13 @@
                   PROYECTOS
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">IBERÁ</a></li>
-                  <li><a class="dropdown-item" href="#">EL IMPENETRABLE</a></li>
-                  <li><a class="dropdown-item" href="#">PATAGONIA</a></li>
-                  <li><a class="dropdown-item" href="#">PATAGONIA AZUL</a></li>
-                  <li><a class="dropdown-item" href="#">PROGRAMA MARINO</a></li>
+                  <li><a class="dropdown-item" href="Error404.html">IBERÁ</a></li>
+                  <li><a class="dropdown-item" href="Error404.html">EL IMPENETRABLE</a></li>
+                  <li><a class="dropdown-item" href="Error404.html">PATAGONIA</a></li>
+                  <li><a class="dropdown-item" href="Error404.html">PATAGONIA AZUL</a></li>
+                  <li><a class="dropdown-item" href="Error404.html">PROGRAMA MARINO</a></li>
                   <li>
-                    <a class="dropdown-item" href="#"
+                    <a class="dropdown-item" href="Error404.html"
                       >PARQUES PARA LA CONSERVACIÓN</a
                     >
                   </li>
@@ -88,6 +88,12 @@
               </li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#subscribeModal">
+                  <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                  Suscribirse
+                </a>
+              </li>
               <li class="nav-item">
                 <a
                   class="nav-link"
@@ -125,13 +131,13 @@
                   <form class="d-flex col-12">
                     <div class="row d-flex justify-content-center">
                       <div class="px-4 pb-3 d-flex justify-content-center">
-                        <input type="email" id="email" name="email" placeholder="E-mail" required />
+                        <input maxlength="20" type="email" id="email" name="email" placeholder="E-mail" required />
                       </div>
                       <div class="px-4 pb-3 d-flex justify-content-center">
-                        <input type="password" id="password" name="login" placeholder="Contraseña" required />
+                        <input maxlength="20" type="password" id="password" name="login" placeholder="Contraseña" required />
                       </div>
                       <div class="px-4 pb-3 d-flex justify-content-center">
-                        <input type="submit" value="Ingresar" class="btn btn-dark" />
+                        <input maxlength="20" type="submit" value="Ingresar" class="btn btn-dark" />
                       </div>
                     </div>
                   </form>
@@ -141,12 +147,12 @@
                     </div>
                     <div class="flex-row gap-4 d-flex justify-content-center">
                       <div>
-                        <a href="/" class="btn btn-link link-dark">
+                        <a href="Error404.html" class="btn btn-link link-dark">
                           <i class="fa fa-google" aria-hidden="true"></i>
                         </a>
                       </div>
                       <div>
-                        <a href="/" class="btn btn-link link-dark">
+                        <a href="Error404.html" class="btn btn-link link-dark">
                           <i class="fa fa-facebook-official" aria-hidden="true"></i>
                         </a>
                       </div>
@@ -178,6 +184,49 @@
         </div>
       </div>
       <!-- /loginModal -->
+       <!-- subscribeModal -->
+       <div
+       class="modal fade"
+       id="subscribeModal"
+       tabindex="-1"
+       aria-labelledby="subscribeModalLabel"
+       aria-hidden="true">
+       <div class="d-flex">
+         <div class="modal-dialog">
+           <div class="modal-content">
+             <div class="modal-header">
+               <h1 class="modal-title fs-5" id="subscribeModalLabel">Suscripción</h1>
+               <button
+                 type="button"
+                 class="btn-close"
+                 data-bs-dismiss="modal"
+                 aria-label="Close"
+                 onClick="back()"></button>
+             </div>
+             <div class="modal-body">
+               <div class="row" id="login">
+                 <div class="col-12 d-flex justify-content-center">
+                   <p>
+                     Coloque su e-mail para poder suscribirse a nuestro newsletter y recibir notificaciones del blog:
+                   </p>
+                 </div>
+                 <form>
+                   <div class="row d-flex justify-content-center">
+                     <div class="px-4 pb-3 d-flex justify-content-center">
+                       <input maxlength="20" type="email" id="emailSub" name="emailSub" placeholder="E-mail" required />
+                     </div>
+                     <div class="px-4 pb-3 d-flex justify-content-center">
+                       <input maxlength="20" type="submit" value="Aceptar" class="btn btn-dark" />
+                     </div>
+                   </div>
+                 </form>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <!-- /subscribeModal -->
     </header>
    <!-- TERMINA NAVBAR -->
     <main>
@@ -221,7 +270,7 @@
                     <img src="../imges/FARL.png" class="rounded-circle col-12" width="auto" height="350" alt="FERNANDO AGUSTIN RODRIGUEZ LOPEZ">
                     <div class="card-body">
                       <h3>FERNANDO AGUSTIN RODRIGUEZ LOPEZ</h3>
-                      <p class="card-text">Salteño, desarrollo las paginas acerca de y la galeria de imagenes  </p>
+                      <p class="card-text">Salteño, 31 años Contador, trabaja actualmente en una empresa dedicada al agro desarrollo las paginas acerca de y la galeria de imagenes  </p>
                     </div>
                   </div>
                   <!-- CARD 2 -->
@@ -229,7 +278,7 @@
                     <img src="../imges/up.jpeg" class="rounded-circle col-12" height="350" alt="Ulises Paz">
                     <div class="card-body">
                       <h3>ULISES PAZ</h3>
-                      <p class="card-text">Tucuman, desarrollo la entrada del blog  </p>
+                      <p class="card-text">Tucumano, 23 años estudiante de ing en sistemas de información desarrollo la entrada del blog  </p>
                     </div>
                   </div>
                   <!-- CARD 3 -->
@@ -237,7 +286,7 @@
                     <img src="../imges/AV.png" class="rounded-circle col-12" height="350" alt="ALEJANDRO VILLAREAL">
                     <div class="card-body">
                       <h3>ALEJANDRO VILLAREAL</h3>
-                      <p class="card-text">Tucumano, desarrollo las paginas de Formulario de contacto, Error 404 y Suscripcion  </p>
+                      <p class="card-text">Tucumano, 46 años Analista de Sistemas, Jefe de RRHH Ingenio Leales desarrollo las paginas de Formulario de contacto, Error 404 y Suscripcion  </p>
                     </div>
                   </div>
                   <!-- CARD 4 -->
@@ -245,7 +294,7 @@
                     <img src="../imges/JO.png" class="rounded-circle col-12" height="350" alt="JULIAN OROZCO">
                     <div class="card-body">
                       <h3>JULIAN OROZCO</h3>
-                      <p class="card-text">Bonaerense, desarrollo la pagina de loguin y el footer  </p>
+                      <p class="card-text">Bonaerense, 31 años Analista de Soporte, estudiante de Ingeniería de Software desarrollo la pagina de loguin y el footer  </p>
                     </div>
                   </div>
                   <!-- CARD 5 -->
@@ -253,7 +302,7 @@
                     <img src="../imges/JM.png" class="rounded-circle col-12" height="350" alt="JAVIER MAMANI">
                     <div class="card-body">
                       <h3>JAVIER MAMANI</h3>
-                      <p class="card-text">Tucumano, desarrollo la pagina principal y el navbar  </p>
+                      <p class="card-text">Tucumano, 24 años estudiante de Ing en sistemas desarrollo la pagina principal y el navbar  </p>
                     </div>
                   </div>
                    <!-- CARD 6 -->
@@ -286,7 +335,7 @@
               <h5 class="text-white">Nosotros</h5>
               <ul class="nav flex-column">
                 <li class="nav-item mb-2">
-                  <a href="../index.html" class="nav-link p-0 text-white">Inicio</a>
+                  <a href="Contacto.html" class="nav-link p-0 text-white">Contacto</a>
                 </li>
                 <li class="nav-item mb-2">
                   <a href="AcercaDe.html" class="nav-link p-0 text-white">Quiénes somos</a>
@@ -300,13 +349,13 @@
             <div class="col-12 col-md-3 mb-3">
               <h5 class="text-white">Proyectos</h5>
               <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Iberá</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">El Impenetrable</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Patagonia</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Patagonia Azul</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Programa Marino</a></li>
+                <li class="nav-item mb-2"><a href="Error404.html" class="nav-link p-0 text-white">Iberá</a></li>
+                <li class="nav-item mb-2"><a href="Error404.html" class="nav-link p-0 text-white">El Impenetrable</a></li>
+                <li class="nav-item mb-2"><a href="Error404.html" class="nav-link p-0 text-white">Patagonia</a></li>
+                <li class="nav-item mb-2"><a href="Error404.html" class="nav-link p-0 text-white">Patagonia Azul</a></li>
+                <li class="nav-item mb-2"><a href="Error404.html" class="nav-link p-0 text-white">Programa Marino</a></li>
                 <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0 text-white">Parques para la conservación</a>
+                  <a href="Error404.html" class="nav-link p-0 text-white">Parques para la conservación</a>
                 </li>
               </ul>
             </div>

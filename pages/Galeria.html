@@ -71,13 +71,13 @@
                   PROYECTOS
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">IBERÁ</a></li>
-                  <li><a class="dropdown-item" href="#">EL IMPENETRABLE</a></li>
-                  <li><a class="dropdown-item" href="#">PATAGONIA</a></li>
-                  <li><a class="dropdown-item" href="#">PATAGONIA AZUL</a></li>
-                  <li><a class="dropdown-item" href="#">PROGRAMA MARINO</a></li>
+                  <li><a class="dropdown-item" href="Error404.html">IBERÁ</a></li>
+                  <li><a class="dropdown-item" href="Error404.html">EL IMPENETRABLE</a></li>
+                  <li><a class="dropdown-item" href="Error404.html">PATAGONIA</a></li>
+                  <li><a class="dropdown-item" href="Error404.html">PATAGONIA AZUL</a></li>
+                  <li><a class="dropdown-item" href="Error404.html">PROGRAMA MARINO</a></li>
                   <li>
-                    <a class="dropdown-item" href="#"
+                    <a class="dropdown-item" href="Error404.html"
                       >PARQUES PARA LA CONSERVACIÓN</a
                     >
                   </li>
@@ -88,6 +88,12 @@
               </li>
             </ul>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#subscribeModal">
+                  <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                  Suscribirse
+                </a>
+              </li>
               <li class="nav-item">
                 <a
                   class="nav-link"
@@ -103,6 +109,48 @@
           </div>
         </div>
       </nav>
+         <!-- subscribeModal -->
+         <div
+         class="modal fade"
+         id="subscribeModal"
+         tabindex="-1"
+         aria-labelledby="subscribeModalLabel"
+         aria-hidden="true">
+         <div class="d-flex">
+           <div class="modal-dialog">
+             <div class="modal-content">
+               <div class="modal-header">
+                 <h1 class="modal-title fs-5" id="subscribeModalLabel">Suscripción</h1>
+                 <button
+                   type="button"
+                   class="btn-close"
+                   data-bs-dismiss="modal"
+                   aria-label="Close"
+                   onClick="back()"></button>
+               </div>
+               <div class="modal-body">
+                 <div class="row" id="login">
+                   <div class="col-12 d-flex justify-content-center">
+                     <p>
+                       Coloque su e-mail para poder suscribirse a nuestro newsletter y recibir notificaciones del blog:
+                     </p>
+                   </div>
+                   <form>
+                     <div class="row d-flex justify-content-center">
+                       <div class="px-4 pb-3 d-flex justify-content-center">
+                         <input maxlength="20" type="email" id="emailSub" name="emailSub" placeholder="E-mail" required />
+                       </div>
+                       <div class="px-4 pb-3 d-flex justify-content-center">
+                         <input maxlength="20" type="submit" value="Aceptar" class="btn btn-dark" />
+                       </div>
+                     </div>
+                   </form>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
       <!-- loginModal -->
       <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="d-flex">
@@ -128,10 +176,10 @@
                         <input type="email" id="email" name="email" placeholder="E-mail" required />
                       </div>
                       <div class="px-4 pb-3 d-flex justify-content-center">
-                        <input type="password" id="password" name="login" placeholder="Contraseña" required />
+                        <input maxlength="20" type="password" id="password" name="login" placeholder="Contraseña" required />
                       </div>
                       <div class="px-4 pb-3 d-flex justify-content-center">
-                        <input type="submit" value="Ingresar" class="btn btn-dark" />
+                        <input maxlength="20" type="submit" value="Ingresar" class="btn btn-dark" />
                       </div>
                     </div>
                   </form>
@@ -141,12 +189,12 @@
                     </div>
                     <div class="flex-row gap-4 d-flex justify-content-center">
                       <div>
-                        <a href="/" class="btn btn-link link-dark">
+                        <a href="Error404.html" class="btn btn-link link-dark">
                           <i class="fa fa-google" aria-hidden="true"></i>
                         </a>
                       </div>
                       <div>
-                        <a href="/" class="btn btn-link link-dark">
+                        <a href="Error404.html" class="btn btn-link link-dark">
                           <i class="fa fa-facebook-official" aria-hidden="true"></i>
                         </a>
                       </div>
@@ -280,7 +328,7 @@
               <h5 class="text-white">Nosotros</h5>
               <ul class="nav flex-column">
                 <li class="nav-item mb-2">
-                  <a href="../index.html" class="nav-link p-0 text-white">Inicio</a>
+                  <a href="Contacto.html" class="nav-link p-0 text-white">Contacto</a>
                 </li>
                 <li class="nav-item mb-2">
                   <a href="AcercaDe.html" class="nav-link p-0 text-white">Quiénes somos</a>
@@ -294,13 +342,13 @@
             <div class="col-12 col-md-3 mb-3">
               <h5 class="text-white">Proyectos</h5>
               <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Iberá</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">El Impenetrable</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Patagonia</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Patagonia Azul</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Programa Marino</a></li>
+                <li class="nav-item mb-2"><a href="Error404.html" class="nav-link p-0 text-white">Iberá</a></li>
+                <li class="nav-item mb-2"><a href="Error404.html" class="nav-link p-0 text-white">El Impenetrable</a></li>
+                <li class="nav-item mb-2"><a href="Error404.html" class="nav-link p-0 text-white">Patagonia</a></li>
+                <li class="nav-item mb-2"><a href="Error404.html" class="nav-link p-0 text-white">Patagonia Azul</a></li>
+                <li class="nav-item mb-2"><a href="Error404.html" class="nav-link p-0 text-white">Programa Marino</a></li>
                 <li class="nav-item mb-2">
-                  <a href="#" class="nav-link p-0 text-white">Parques para la conservación</a>
+                  <a href="Error404.html" class="nav-link p-0 text-white">Parques para la conservación</a>
                 </li>
               </ul>
             </div>
